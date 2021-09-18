@@ -4,7 +4,7 @@ services:
     db:
         image: mysql:5.7
         volumes:
-            - ./mysql:/var/lib/myslq
+            - ./mysql:/var/lib/mysql
         ports:
             - "4306:3306"
         restart: always
@@ -29,4 +29,6 @@ services:
             WORDPRESS_DB_PASSWORD: wordpress.1
             WORDRPESS_DB_NAME: wordpress
 
-
+volumes:
+    mysql:
+    src:
